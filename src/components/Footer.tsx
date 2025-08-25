@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Shield, Award } from
 const Footer = () => {
   const quickLinks = [
     { label: "Sobre a Dra. Wanna", href: "#sobre" },
-    { label: "Ebook Gratuito", href: "#ebook" },
+    { label: "Ebook Lipederma", href: "#ebook" },
     { label: "Tratamentos", href: "#tratamentos" },
     { label: "Agendar Consulta", href: "#consultas" }
   ];
@@ -15,13 +15,13 @@ const Footer = () => {
   ];
 
   const socialMedia = [
-    { icon: Instagram, label: "Instagram", href: "https://instagram.com/dra.wannaborges" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/wannaborgesoficial/" },
     { icon: Facebook, label: "Facebook", href: "https://facebook.com/dra.wannaborges" },
     { icon: Youtube, label: "YouTube", href: "https://youtube.com/@dra.wannaborges" }
   ];
 
   const certifications = [
-    "CRM: 123.456-SP",
+    "CRM: 52687448-RJ",
     "RQE: 12345 - Endocrinologia",
     "Especialista em Lipedema",
     "Membro da SBEM"
@@ -37,7 +37,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contato" className="bg-foreground text-background">
+    <footer id="contato" className="bg-secondary text-secondary-foreground scroll-mt-20">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16">
@@ -117,19 +117,18 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-background/80">
-                    <p>Av. Paulista, 1234 - Conjunto 567</p>
-                    <p>Bela Vista, São Paulo - SP</p>
-                    <p>CEP: 01310-100</p>
+                    <p>R. Dois de Dezembro, 78 - sl 317 - Flamengo</p>
+                    <p>Rio de Janeiro - RJ, 22220-040, Brasil</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-primary" />
                   <a 
-                    href="tel:+5511999999999"
+                    href="tel:+5521976681351"
                     className="text-sm text-background/80 hover:text-primary transition-colors"
                   >
-                    (11) 9 9999-9999
+                    +55 21 97668-1351
                   </a>
                 </div>
 

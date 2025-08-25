@@ -57,8 +57,8 @@ const AppointmentSection = () => {
     {
       icon: Phone,
       label: "Telefone",
-      value: "(11) 9 9999-9999",
-      action: "tel:+5511999999999"
+      value: "+55 21 97668-1351",
+      action: "tel:+5521976681351"
     },
     {
       icon: Mail,
@@ -69,13 +69,13 @@ const AppointmentSection = () => {
     {
       icon: Instagram,
       label: "Instagram",
-      value: "@dra.wannaborges",
-      action: "https://instagram.com/dra.wannaborges"
+      value: "@wannaborgesoficial",
+      action: "https://www.instagram.com/wannaborgesoficial/"
     }
   ];
 
   return (
-    <section id="consultas" className="py-20 section-gradient">
+    <section id="consultas" className="py-20 section-gradient scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -160,15 +160,14 @@ const AppointmentSection = () => {
                         Consultório Médico Dra. Wanna Borges
                       </h4>
                       <p className="text-muted-foreground mb-4">
-                        Av. Paulista, 1234 - Conjunto 567<br />
-                        Bela Vista, São Paulo - SP<br />
-                        CEP: 01310-100
+                        R. Dois de Dezembro, 78 - sl 317 - Flamengo, Rio de Janeiro - RJ, 22220-040, Brasil<br />
+                        Rua do Catete 311, Rio de Janeiro
                       </p>
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                         <div>
                           <p className="font-semibold text-foreground">🚇 Metrô:</p>
-                          <p className="text-muted-foreground">Estação Trianon-MASP</p>
+                          <p className="text-muted-foreground">Estação Flamengo</p>
                         </div>
                         <div>
                           <p className="font-semibold text-foreground">🚗 Estacionamento:</p>
@@ -178,9 +177,15 @@ const AppointmentSection = () => {
                     </div>
                   </div>
                   
-                  <Button variant="outline" className="w-full">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    Ver no Google Maps
+                  <Button variant="outline" className="w-full" asChild>
+                    <a
+                      href="https://www.google.com/maps/place/DRA.+WANNA+BORGES/@-22.9296904,-43.1794838,17z/data=!4m16!1m9!3m8!1s0x997f1fcb703c53:0x2ffe3ea6fceede7f!2sDRA.+WANNA+BORGES!8m2!3d-22.9296904!4d-43.1769089!9m1!1b1!16s%2Fg%2F11j2z3sf50!3m5!1s0x997f1fcb703c53:0x2ffe3ea6fceede7f!8m2!3d-22.9296904!4d-43.1769089!16s%2Fg%2F11j2z3sf50?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Ver no Google Maps
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -216,109 +221,23 @@ const AppointmentSection = () => {
               </div>
             </div>
 
-            {/* Appointment Form */}
             <div>
-              <div className="card-medical">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-                  Agendar Consulta
+              <div className="card-medical text-center p-8">
+                <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Agende sua consulta agora mesmo
                 </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Nome Completo *
-                      </label>
-                      <Input
-                        required
-                        value={formData.name}
-                        onChange={(e) => handleInputChange('name', e.target.value)}
-                        placeholder="Seu nome completo"
-                        className="w-full"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        E-mail *
-                      </label>
-                      <Input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
-                        placeholder="seu@email.com"
-                        className="w-full"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Telefone/WhatsApp *
-                      </label>
-                      <Input
-                        required
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="(11) 9 9999-9999"
-                        className="w-full"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Tipo de Consulta *
-                      </label>
-                      <Select value={formData.consultationType} onValueChange={(value) => handleInputChange('consultationType', value)}>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Selecione o tipo" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {consultationTypes.map((type) => (
-                            <SelectItem key={type.value} value={type.value}>
-                              {type.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Data Preferencial
-                    </label>
-                    <Input
-                      type="date"
-                      value={formData.preferredDate}
-                      onChange={(e) => handleInputChange('preferredDate', e.target.value)}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Mensagem (Opcional)
-                    </label>
-                    <Textarea
-                      value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      placeholder="Conte um pouco sobre seu caso ou dúvidas..."
-                      className="w-full h-24"
-                    />
-                  </div>
-
-                  <Button type="submit" className="btn-medical w-full text-lg py-4">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Enviar Solicitação de Agendamento
-                  </Button>
-
-                  <p className="text-sm text-muted-foreground text-center">
-                    * Campos obrigatórios. Entraremos em contato em até 24h para confirmar sua consulta.
-                  </p>
-                </form>
+                <p className="text-lg text-muted-foreground mb-6 max-w-md mx-auto">
+                  Tratamentos personalizados para mulheres que desejam eliminar varizes e lipedema, melhorando a saúde e a autoestima.
+                </p>
+                <Button asChild className="btn-medical w-full md:w-auto text-lg py-4 mb-4">
+                  <a href="https://wa.me/5521976681351" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                    <img src="/icones/whatsapp.png" alt="WhatsApp" className="w-5 h-5 mr-2" />
+                    Agende sua consulta
+                  </a>
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  Atendimento personalizado e exclusivo realizado apenas de forma particular. Clique no botão para agendar sua consulta.
+                </p>
               </div>
             </div>
           </div>

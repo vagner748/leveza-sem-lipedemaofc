@@ -1,55 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+/* Medical Wellness Design System - Lipedema Specialist Landing Page */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Medical Wellness Design System - Lipedema Specialist Landing Page */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
 @layer base {
   :root {
-    /* Core Medical Palette */
-    --background: 250 100% 99%;
-    --foreground: 225 15% 20%;
-    
-    /* Medical Trust Colors */
-    --medical-primary: 200 95% 45%; /* Professional medical blue */
-    --medical-secondary: 160 85% 40%; /* Healing green */
-    --wellness-accent: 320 60% 75%; /* Gentle feminine pink */
-    --comfort-warm: 35 90% 85%; /* Warm comfort tone */
-    
+    /* New Palette - Leveza Sem Lipedema */
+    --background: 0 0% 100%; /* BRANCO */
+    --foreground: 0 0% 4%; /* CINZA-ESCURO */
+
     /* Semantic Tokens */
-    --primary: 200 95% 45%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 200 95% 40%;
-    
-    --secondary: 160 85% 40%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 160 85% 35%;
-    
-    --accent: 320 60% 75%;
-    --accent-foreground: 225 15% 20%;
-    --accent-hover: 320 60% 70%;
-    
-    --muted: 220 20% 96%;
-    --muted-foreground: 225 15% 45%;
-    
+    --primary: 29 92% 16%; /* MARROM ESCURO */
+    --primary-foreground: 0 0% 100%; /* BRANCO */
+    --primary-hover: 29 92% 21%;
+
+    --secondary: 29 18% 45%; /* LARANJA APAGADO */
+    --secondary-foreground: 0 0% 100%; /* BRANCO */
+    --secondary-hover: 29 18% 50%;
+
+    --accent: 30 15% 74%; /* LARANJA ACIDENTADO PASTEL */
+    --accent-foreground: 0 0% 4%; /* CINZA-ESCURO */
+    --accent-hover: 30 15% 69%;
+
+    --muted: 30 15% 94%;
+    --muted-foreground: 29 18% 45%;
+
     --card: 0 0% 100%;
-    --card-foreground: 225 15% 20%;
-    
-    --border: 220 20% 90%;
-    --input: 220 20% 95%;
-    --ring: 200 95% 45%;
-    
-    /* Gradients */
-    --gradient-medical: linear-gradient(135deg, hsl(200 95% 45%), hsl(160 85% 40%));
-    --gradient-hero: linear-gradient(135deg, hsl(200 95% 45% / 0.1), hsl(320 60% 75% / 0.1));
-    --gradient-wellness: linear-gradient(180deg, hsl(250 100% 99%), hsl(220 20% 96%));
-    --gradient-accent: linear-gradient(45deg, hsl(320 60% 75%), hsl(35 90% 85%));
-    
-    /* Shadows */
-    --shadow-medical: 0 10px 30px -5px hsl(200 95% 45% / 0.15);
-    --shadow-gentle: 0 4px 20px -2px hsl(225 15% 20% / 0.08);
-    --shadow-card: 0 2px 10px -1px hsl(225 15% 20% / 0.05);
+    --card-foreground: 0 0% 4%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 92%;
+    --ring: 29 92% 16%; /* MARROM ESCURO */
+
+    /* Gradients - Adjusted to new palette */
+    --gradient-medical: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1));
+    --gradient-wellness: linear-gradient(180deg, hsl(var(--muted)), hsl(0 0% 100%));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--secondary)));
+
+    /* Shadows - Adjusted to new palette */
+    --shadow-medical: 0 10px 30px -5px hsl(var(--primary) / 0.15);
+    --shadow-gentle: 0 4px 20px -2px hsl(var(--foreground) / 0.08);
+    --shadow-card: 0 2px 10px -1px hsl(var(--foreground) / 0.05);
     
     /* Typography Scale */
     --font-display: 'Playfair Display', serif;
@@ -60,20 +54,14 @@
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
 
+    /* Sidebar - Kept original structure, can be themed later */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 

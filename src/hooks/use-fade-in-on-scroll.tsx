@@ -4,6 +4,8 @@ const useFadeInOnScroll = () => {
   const domRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const currentDomRef = domRef.current; // Capture the current value
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -15,14 +17,14 @@ const useFadeInOnScroll = () => {
       threshold: 0.1 // Trigger when 10% of the element is visible
     });
 
-    if (domRef.current) {
-      domRef.current.classList.add('fade-in-section'); // Add initial hidden class
-      observer.observe(domRef.current);
+    if (currentDomRef) {
+      currentDomRef.classList.add('fade-in-section'); // Add initial hidden class
+      observer.observe(currentDomRef);
     }
 
     return () => {
-      if (domRef.current) {
-        observer.unobserve(domRef.current);
+      if (currentDomRef) { // Use the captured value here
+        observer.unobserve(currentDomRef);
       }
     };
   }, []);

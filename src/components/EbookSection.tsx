@@ -11,13 +11,20 @@ const EbookSection = () => {
     "Conheça as opções de tratamento mais modernas e eficazes"
   ];
 
+  const buyers = [
+    { name: 'Ana',   src: '/perfil-vendas/compradora1.png' },
+    { name: 'Carla', src: '/perfil-vendas/compradora2.png' },
+    { name: 'Sofia', src: '/perfil-vendas/compradora3.png' },
+    { name: 'Joana', src: '/perfil-vendas/compradora4.png' },
+  ];
+
   const headerRef = useFadeInOnScroll();
   const contentRef = useFadeInOnScroll();
   const socialProofRef = useFadeInOnScroll();
   const ctaRef = useFadeInOnScroll();
 
   return (
-    <section id="ebook" className="py-20 section-gradient">
+    <section id="ebook" className="py-20 section-gradient scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -54,7 +61,7 @@ const EbookSection = () => {
               
               {/* Floating Elements */}
               <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-2 rounded-full font-semibold text-sm animate-pulse-soft sm:-top-4 sm:-right-4">
-                GRÁTIS
+                R$:47,00
               </div>
               
               <div className="absolute bottom-0 left-0 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-medium sm:-bottom-4 sm:-left-4">
@@ -84,14 +91,15 @@ const EbookSection = () => {
               {/* Social Proof */}
               <div ref={socialProofRef} className="bg-card rounded-lg p-6 border border-border">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="w-10 h-10 rounded-full bg-gradient-accent border-2 border-background flex items-center justify-center"
-                      >
-                        <span className="text-xs font-bold">{i}</span>
-                      </div>
+                  <div className="flex -space-x-2 overflow-hidden">
+                    {buyers.map((buyer) => (
+                      <img
+                        key={buyer.name}
+                        src={buyer.src}
+                        alt={`Foto de ${buyer.name}, compradora do ebook`}
+                        className="inline-block h-10 w-10 rounded-full border-2 border-background"
+                        title={buyer.name}
+                      />
                     ))}
                   </div>
                   <div>
@@ -107,9 +115,15 @@ const EbookSection = () => {
 
               {/* CTA */}
               <div ref={ctaRef} className="space-y-4">
-                <Button className="btn-medical w-full text-lg py-4">
-                  <Download className="w-5 h-5 mr-2" />
-                  Baixar Ebook Gratuitamente
+                <Button asChild className="btn-medical w-full text-lg py-4">
+                  <a
+                    href="https://pay.hotmart.com/R99789259P?checkoutMode=10&bid=1755551894672"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Comece sua jornada sem dor!
+                  </a>
                 </Button>
                 
                 <p className="text-center text-sm text-muted-foreground">

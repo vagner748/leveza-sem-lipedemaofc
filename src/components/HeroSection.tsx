@@ -60,7 +60,7 @@ const HeroSection = () => {
               onClick={() => scrollToSection('ebook')}
               className="btn-medical text-lg px-8 py-4 animate-pulse-soft"
             >
-              Baixar Ebook
+              Transforme sua dor em alívio
             </Button>
             
             <Button
@@ -68,7 +68,7 @@ const HeroSection = () => {
               variant="outline"
               className="text-lg px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
-              Agendar Consulta
+              Agende sua Consulta
             </Button>
           </div>
 
@@ -76,7 +76,7 @@ const HeroSection = () => {
           <div ref={trustRef} className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-12 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <span>CRM: 12345-SP</span>
+              <span>CRM: 52687448-RJ</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-secondary rounded-full"></div>

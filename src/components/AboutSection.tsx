@@ -45,7 +45,7 @@ const AboutSection = () => {
   const testimonialsRef = useFadeInOnScroll();
 
   return (
-    <section id="sobre" className="py-20 bg-background">
+    <section id="sobre" className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -61,8 +61,8 @@ const AboutSection = () => {
             <p className="font-display text-2xl text-accent mb-4">
               Especialista em Lipedema
             </p>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              CRM: 123.456-SP • Endocrinologista • Nutróloga
+            <p className="text-lg text-gray-700">
+              CRM: 52687448-RJ
             </p>
           </div>
 
