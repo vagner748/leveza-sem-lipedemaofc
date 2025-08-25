@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
+import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,6 +9,11 @@ const HeroSection = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const h1Ref = useFadeInOnScroll();
+  const subheadlineRef = useFadeInOnScroll();
+  const ctaRef = useFadeInOnScroll();
+  const trustRef = useFadeInOnScroll();
 
   return (
     <section 
@@ -22,7 +28,7 @@ const HeroSection = () => {
       <div className="container mx-auto text-center max-w-4xl">
         <div className="space-y-6 animate-fade-in">
           {/* Main Headline */}
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight">
+          <h1 ref={h1Ref} className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight">
             Cada escolha é um passo para{" "}
             <span className="bg-gradient-medical bg-clip-text text-transparent">
               menos dor
@@ -34,7 +40,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div ref={subheadlineRef} className="max-w-3xl mx-auto space-y-4">
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               <strong className="text-foreground">Endocrinologista há 15 anos</strong>, 
               Dra. Wanna Borges é especialista em lipedemas, e já melhorou a qualidade 
@@ -49,7 +55,7 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <Button
               onClick={() => scrollToSection('ebook')}
               className="btn-medical text-lg px-8 py-4 animate-pulse-soft"
@@ -67,7 +73,7 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-12 text-sm text-muted-foreground">
+          <div ref={trustRef} className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-12 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
               <span>CRM: 12345-SP</span>

@@ -1,4 +1,5 @@
 import { AlertTriangle, Users, Activity, Heart } from "lucide-react";
+import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const LipedemasSection = () => {
   const symptoms = [
@@ -38,12 +39,18 @@ const LipedemasSection = () => {
     }
   ];
 
+  const headerRef = useFadeInOnScroll();
+  const statsRef = useFadeInOnScroll();
+  const whatIsRef = useFadeInOnScroll();
+  const symptomsRef = useFadeInOnScroll();
+  const ctaRef = useFadeInOnScroll();
+
   return (
     <section id="lipedema" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div ref={headerRef} className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-6">
               <Users className="w-5 h-5 text-accent" />
               <span className="text-accent font-semibold">CONSCIENTIZAÇÃO</span>
@@ -60,7 +67,7 @@ const LipedemasSection = () => {
           </div>
 
           {/* Statistics */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div ref={statsRef} className="grid md:grid-cols-3 gap-8 mb-16">
             {facts.map((fact, index) => (
               <div 
                 key={index} 
@@ -80,7 +87,7 @@ const LipedemasSection = () => {
           </div>
 
           {/* What is Lipedema */}
-          <div className="bg-gradient-wellness rounded-[var(--radius-xl)] p-8 md:p-12 mb-16">
+          <div ref={whatIsRef} className="bg-gradient-wellness rounded-[var(--radius-xl)] p-8 md:p-12 mb-16">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground">
                 O que é o Lipedema?
@@ -108,8 +115,8 @@ const LipedemasSection = () => {
           </div>
 
           {/* Symptoms */}
-          <div>
-            <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+          <div ref={symptomsRef}>
+            <h3 className="font-display text-3xl font-bold text-foreground text-center mb-12">
               Principais Sintomas
             </h3>
             
@@ -136,7 +143,7 @@ const LipedemasSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
+          <div ref={ctaRef} className="text-center mt-16">
             <div className="bg-gradient-medical text-primary-foreground rounded-[var(--radius-xl)] p-8 md:p-12">
               <h3 className="font-display text-2xl md:text-3xl font-bold mb-4">
                 Você não está sozinha nessa jornada

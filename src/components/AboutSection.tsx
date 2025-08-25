@@ -1,5 +1,6 @@
 import { Award, Users, Clock, GraduationCap } from "lucide-react";
 import draWannaImage from "@/assets/dra-wanna-borges.jpg";
+import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const AboutSection = () => {
   const credentials = [
@@ -38,12 +39,17 @@ const AboutSection = () => {
     }
   ];
 
+  const headerRef = useFadeInOnScroll();
+  const mainContentRef = useFadeInOnScroll();
+  const credentialsRef = useFadeInOnScroll();
+  const testimonialsRef = useFadeInOnScroll();
+
   return (
     <section id="sobre" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div ref={headerRef} className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full mb-6">
               <Award className="w-5 h-5 text-secondary" />
               <span className="text-secondary font-semibold">ESPECIALISTA</span>
@@ -60,7 +66,7 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div ref={mainContentRef} className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             {/* Photo and Main Info */}
             <div className="space-y-8">
               <div className="relative">
@@ -134,7 +140,7 @@ const AboutSection = () => {
           </div>
 
           {/* Credentials Grid */}
-          <div className="mb-20">
+          <div ref={credentialsRef} className="mb-20">
             <h3 className="font-display text-3xl font-bold text-foreground text-center mb-12">
               Credenciais e Experiência
             </h3>
@@ -162,7 +168,7 @@ const AboutSection = () => {
           </div>
 
           {/* Testimonials */}
-          <div>
+          <div ref={testimonialsRef}>
             <h3 className="font-display text-3xl font-bold text-foreground text-center mb-12">
               O que dizem as pacientes
             </h3>

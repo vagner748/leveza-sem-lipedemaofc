@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, BookOpen, Heart } from "lucide-react";
 import ebookMockup from "@/assets/ebook-mockup.jpg";
+import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const EbookSection = () => {
   const benefits = [
@@ -10,12 +11,17 @@ const EbookSection = () => {
     "Conheça as opções de tratamento mais modernas e eficazes"
   ];
 
+  const headerRef = useFadeInOnScroll();
+  const contentRef = useFadeInOnScroll();
+  const socialProofRef = useFadeInOnScroll();
+  const ctaRef = useFadeInOnScroll();
+
   return (
     <section id="ebook" className="py-20 section-gradient">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div ref={headerRef} className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
               <BookOpen className="w-5 h-5 text-primary" />
               <span className="text-primary font-semibold">EBOOK EXCLUSIVO</span>
@@ -57,7 +63,7 @@ const EbookSection = () => {
             </div>
 
             {/* Content */}
-            <div className="space-y-8">
+            <div ref={contentRef} className="space-y-8">
               <div className="space-y-6">
                 <h3 className="font-display text-3xl font-bold text-foreground">
                   O que você vai descobrir:
@@ -76,7 +82,7 @@ const EbookSection = () => {
               </div>
 
               {/* Social Proof */}
-              <div className="bg-card rounded-lg p-6 border border-border">
+              <div ref={socialProofRef} className="bg-card rounded-lg p-6 border border-border">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4].map((i) => (
@@ -100,7 +106,7 @@ const EbookSection = () => {
               </div>
 
               {/* CTA */}
-              <div className="space-y-4">
+              <div ref={ctaRef} className="space-y-4">
                 <Button className="btn-medical w-full text-lg py-4">
                   <Download className="w-5 h-5 mr-2" />
                   Baixar Ebook Gratuitamente
