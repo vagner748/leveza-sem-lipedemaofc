@@ -22,7 +22,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border h-20" style={{ backgroundImage: 'url(/logo-wanna/1.png)', backgroundSize: 'contain', backgroundPosition: '25% center', backgroundRepeat: 'no-repeat' }}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border h-20" style={{ backgroundImage: 'url(/logo-wanna/1.webp)', backgroundSize: 'contain', backgroundPosition: '25% center', backgroundRepeat: 'no-repeat' }}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/hero-bg.webp";
 import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const HeroSection = () => {
@@ -42,7 +42,7 @@ const HeroSection = () => {
           {/* Subheadline */}
           <div ref={subheadlineRef} className="max-w-3xl mx-auto space-y-4">
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Endocrinologista há 15 anos</strong>, 
+              <strong className="text-foreground">Endocrinologista há mais de 20 anos</strong>, 
               Dra. Wanna Borges é especialista em lipedemas, e já melhorou a qualidade 
               de vida de mais de <strong className="text-primary">500 pacientes</strong>.
             </p>

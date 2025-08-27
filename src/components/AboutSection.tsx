@@ -1,5 +1,5 @@
 import { Award, Users, Clock, GraduationCap } from "lucide-react";
-import draWannaImage from "@/assets/dra-wanna-borges.jpg";
+import draWannaImage from "@/assets/dra-wanna-borges.webp";
 import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const AboutSection = () => {

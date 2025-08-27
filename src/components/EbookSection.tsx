@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, BookOpen, Heart } from "lucide-react";
-import ebookMockup from "@/assets/ebook-mockup.jpg";
+import ebookMockup from "@/assets/ebook-mockup.webp";
 import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const EbookSection = () => {
@@ -12,10 +12,10 @@ const EbookSection = () => {
   ];
 
   const buyers = [
-    { name: 'Ana',   src: '/perfil-vendas/compradora1.png' },
-    { name: 'Carla', src: '/perfil-vendas/compradora2.png' },
-    { name: 'Sofia', src: '/perfil-vendas/compradora3.png' },
-    { name: 'Joana', src: '/perfil-vendas/compradora4.png' },
+    { name: 'Ana',   src: '/perfil-vendas/compradora1.webp' },
+    { name: 'Carla', src: '/perfil-vendas/compradora2.webp' },
+    { name: 'Sofia', src: '/perfil-vendas/compradora3.webp' },
+    { name: 'Joana', src: '/perfil-vendas/compradora4.webp' },
   ];
 
   const headerRef = useFadeInOnScroll();
