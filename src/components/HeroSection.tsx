@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center pt-20 px-4"
+      className="relative min-h-screen flex items-center justify-center pt-20 px-4 hero-parallax"
       style={{
         backgroundImage: `linear-gradient(135deg, hsl(200 95% 45% / 0.1), hsl(320 60% 75% / 0.1)), url(${heroImage})`,
         backgroundSize: 'cover',

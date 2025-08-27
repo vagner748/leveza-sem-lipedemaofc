@@ -37,7 +37,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contato" className="bg-secondary text-secondary-foreground scroll-mt-20">
+    <footer id="contato" className="bg-[#87725d] text-background">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16">

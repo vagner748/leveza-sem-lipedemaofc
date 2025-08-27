@@ -12,7 +12,7 @@ const Footer = React.lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background scroll-smooth">
+    <div className="min-h-screen scroll-smooth">
       <Header />
       <main>
         <HeroSection />

@@ -110,7 +110,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply text-foreground font-body;
+    background-image: linear-gradient(180deg, hsl(var(--muted)), hsl(var(--accent)));
     font-family: var(--font-body);
   }
   
@@ -135,8 +136,8 @@
   
   /* Card Styles */
   .card-medical {
-    @apply bg-card rounded-[var(--radius-xl)] p-6 shadow-[var(--shadow-card)]
-           border border-border hover:shadow-[var(--shadow-gentle)] 
+    @apply bg-primary/10 backdrop-blur-sm rounded-[var(--radius-xl)] p-6 shadow-[var(--shadow-card)]
+           border border-primary/20 hover:shadow-[var(--shadow-gentle)] 
            transition-all duration-300;
   }
   
@@ -147,6 +148,10 @@
   
   .hero-gradient {
     @apply bg-[var(--gradient-hero)];
+  }
+
+  .hero-parallax {
+    background-attachment: fixed;
   }
   
   /* Animation Classes */

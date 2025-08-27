@@ -46,7 +46,7 @@ const LipedemasSection = () => {
   const ctaRef = useFadeInOnScroll();
 
   return (
-    <section id="lipedema" className="py-20 bg-background scroll-mt-20">
+    <section id="lipedema" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
