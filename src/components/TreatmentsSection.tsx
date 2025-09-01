@@ -69,12 +69,12 @@ const TreatmentsSection = () => {
     {
       title: "Obesidade",
       description: "Abordagem integral para perda de peso saudável e sustentável",
-      color: "bg-secondary/10 text-secondary"
+      color: "bg-primary/10 text-primary"
     },
     {
       title: "Patologias da Tireoide",
       description: "Diagnóstico e tratamento de hipo e hipertireoidismo, nódulos",
-      color: "bg-accent/10 text-accent"
+      color: "bg-primary/10 text-primary"
     }
   ];
 

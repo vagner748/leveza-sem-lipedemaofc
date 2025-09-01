@@ -3,6 +3,56 @@ import { CheckCircle, Download, BookOpen, Heart } from "lucide-react";
 import ebookMockup from "@/assets/ebook-mockup.webp";
 import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
+const MovedContent = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const ctaRef = useFadeInOnScroll();
+  const trustRef = useFadeInOnScroll();
+
+  return (
+    <div className="text-center mb-16">
+      {/* CTA Buttons */}
+      <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+        <Button
+          onClick={() => scrollToSection('ebook')}
+          className="btn-medical text-base px-6 py-3 animate-pulse-soft w-full sm:w-auto"
+        >
+          Transforme sua dor em alívio
+        </Button>
+        
+        <Button
+          onClick={() => scrollToSection('consultas')}
+          variant="outline"
+          className="text-base px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 w-full sm:w-auto"
+        >
+          Agende sua Consulta
+        </Button>
+      </div>
+
+      {/* Trust Indicators */}
+      <div ref={trustRef} className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 text-sm text-muted-foreground">
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <span>CRM: 52687448-RJ</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+          <span>20+ anos de experiência</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 bg-accent rounded-full"></div>
+          <span>500+ pacientes atendidas</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const EbookSection = () => {
   const benefits = [
     "Entenda completamente o que é o lipedema e como identificá-lo",
@@ -27,6 +77,7 @@ const EbookSection = () => {
     <section id="ebook" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          <MovedContent />
           {/* Section Header */}
           <div ref={headerRef} className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">

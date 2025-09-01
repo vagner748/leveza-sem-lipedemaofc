@@ -246,11 +246,11 @@ const TestimonialsSection = () => {
               <p className="text-muted-foreground">Satisfação das pacientes</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-secondary mb-2">500+</div>
+              <div className="text-4xl font-bold text-primary mb-2">500+</div>
               <p className="text-muted-foreground">Vidas transformadas</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">8</div>
+              <div className="text-4xl font-bold text-primary mb-2">8</div>
               <p className="text-muted-foreground">Anos especializados em lipedema</p>
             </div>
           </div>

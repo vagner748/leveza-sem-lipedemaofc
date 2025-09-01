@@ -17,7 +17,7 @@ const AboutSection = () => {
     {
       icon: Clock,
       title: "Experiência",
-      description: "15 anos de prática clínica\n8 anos focada em lipedema\nMais de 3.000 consultas"
+      description: "20 anos de prática clínica\n8 anos focada em lipedema\nMais de 3.000 consultas"
     },
     {
       icon: Users,
@@ -50,9 +50,9 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div ref={headerRef} className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <Award className="w-5 h-5 text-secondary" />
-              <span className="text-secondary font-semibold">ESPECIALISTA</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <Award className="w-5 h-5 text-primary" />
+              <span className="text-primary font-semibold">ESPECIALISTA</span>
             </div>
             
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -86,7 +86,7 @@ const AboutSection = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-1 gap-4">
                 <div className="text-center p-4 bg-gradient-wellness rounded-lg">
-                  <div className="text-3xl font-bold text-primary">15+</div>
+                  <div className="text-3xl font-bold text-primary">20+</div>
                   <div className="text-sm text-muted-foreground">Anos de experiência</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-wellness rounded-lg">
@@ -105,7 +105,7 @@ const AboutSection = () => {
                 
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    Com mais de 15 anos de experiência em Endocrinologia, 
+                    Com mais de 20 anos de experiência em Endocrinologia, 
                     <strong className="text-foreground"> Dra. Wanna Borges</strong> é 
                     reconhecida como uma das principais especialistas em lipedema do país.
                   </p>
