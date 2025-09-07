@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <div className="min-h-screen scroll-smooth">
       <Header />
-      <main className="pt-20">
+      <main className="pt-[55px]">
         <HeroSection />
         <Suspense fallback={<div>Loading...</div>}>
           <EbookSection />
