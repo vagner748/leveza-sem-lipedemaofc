@@ -14,7 +14,7 @@ const HeroSection = () => {
       <span className="text-3xl md:text-5xl">
         menos <span className="bg-gradient-medical bg-clip-text text-transparent">dor</span> e mais
       </span>
-      <span className="text-2xl md:text-4xl bg-gradient-accent bg-clip-text text-transparent">
+      <span className="text-2xl md:text-6xl bg-gradient-accent bg-clip-text text-transparent">
         leveza
       </span>
     </h1>
@@ -34,6 +34,7 @@ const HeroSection = () => {
     <div className="space-y-6 animate-fade-in">
       {headlineContent}
       {subheadlineContent}
+      <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-48" />
     </div>
   );
 
@@ -83,9 +84,7 @@ const HeroSection = () => {
         <div className="max-w-xl text-left" style={{ transform: textTransform }}>
           {textContent}
         </div>
-        <div className="mr-60">
-          <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-48" />
-        </div>
+        
       </div>
     </section>
   );
