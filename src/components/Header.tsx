@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/20 backdrop-blur-md border-b border-border/30 h-20" style={{ backgroundImage: 'url(/logo-wanna/1.webp)', backgroundSize: 'contain', backgroundPosition: '25% center', backgroundRepeat: 'no-repeat' }}>
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2 md:py-4">
         <div className="flex items-center justify-between">
           
 
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <nav className={`md:hidden mt-2 p-4 space-y-2 bg-card rounded-lg shadow-lg transition-opacity duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <nav className={`md:hidden p-4 space-y-2 bg-card rounded-lg shadow-lg transition-opacity duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
             {menuItems.map((item) => (
               <button
                 key={item.id}

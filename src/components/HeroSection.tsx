@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   if (isMobile) {
     return (
-      <section className="relative min-h-screen flex flex-col justify-between items-center text-center px-4 pt-28 pb-8">
+      <section className="relative min-h-screen flex flex-col justify-between items-center text-center px-4 pt-8 pb-8">
         <div 
           className="absolute inset-0"
           style={{
