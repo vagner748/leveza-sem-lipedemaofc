@@ -8,28 +8,24 @@ const HeroSection = () => {
   const { imageOpacity, textTransform } = useParallaxScroll();
 
   const headlineContent = (
-    <h1 className="font-display text-4xl md:text-7xl font-bold text-foreground leading-tight">
-      CADA ESCOLHA É UM <br />
-      PASSO PARA MENOS <br />
-      <span className="bg-gradient-medical bg-clip-text text-transparent">DOR</span>, E{" "}
-      <span className="bg-gradient-accent bg-clip-text text-transparent">
-        MAIS LEVEZA
+    <h1 className="font-display font-bold text-foreground leading-tight flex flex-col items-start">
+      <span className="text-5xl md:text-7xl">CADA ESCOLHA</span>
+      <span className="text-4xl md:text-6xl">é um passo para</span>
+      <span className="text-3xl md:text-5xl">
+        menos <span className="bg-gradient-medical bg-clip-text text-transparent">dor</span> e mais
+      </span>
+      <span className="text-2xl md:text-4xl bg-gradient-accent bg-clip-text text-transparent">
+        leveza
       </span>
     </h1>
   );
 
   const subheadlineContent = (
-    <div className="max-w-3xl mx-auto md:mx-0 space-y-4">
+    <div className="max-w-3xl mx-auto md:mx-0 space-y-2">
       <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed">
         <strong className="text-foreground">Endocrinologista há mais de 20 anos</strong>, 
         Dra. Wanna Borges é especialista em lipedemas, e já melhorou a qualidade 
         de vida de mais de <strong className="text-primary">500 pacientes</strong>.
-      </p>
-      
-      <p className="text-base md:text-xl text-muted-foreground">
-        Seu e-book, <em className="font-display text-primary">
-        "Adeus Lipedema - Volte a se sentir leve e confiante"</em> revela o 
-        segredo para ser saudável e feliz.
       </p>
     </div>
   );
@@ -43,7 +39,7 @@ const HeroSection = () => {
 
   if (isMobile) {
     return (
-      <section className="relative min-h-screen flex flex-col justify-between items-center text-center px-4 pt-8 pb-8">
+      <section className="relative min-h-screen flex flex-col justify-between items-start text-left px-4 pt-8 pb-8">
         <div 
           className="absolute inset-0"
           style={{
@@ -60,7 +56,7 @@ const HeroSection = () => {
         <div className="relative z-10 w-full max-w-md text-left">
           <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-32" />
         </div>
-        <div className="relative z-10 w-full max-w-md">
+        <div className="relative z-10 w-full max-w-md mt-4">
           {subheadlineContent}
         </div>
       </section>

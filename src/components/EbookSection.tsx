@@ -74,9 +74,14 @@ const EbookSection = () => {
   const ctaRef = useFadeInOnScroll();
 
   return (
-    <section id="ebook" className="py-20 scroll-mt-20">
+    <section id="ebook" className="py-5 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground text-center mb-8">
+            Seu e-book, <em className="font-display text-primary">
+            "Adeus Lipedema - Volte a se sentir leve e confiante"</em> revela o 
+            segredo para ser saudável e feliz.
+          </p>
           <MovedContent />
           {/* Section Header */}
           <div ref={headerRef} className="text-center mb-16">
@@ -122,6 +127,11 @@ const EbookSection = () => {
 
             {/* Content */}
             <div ref={contentRef} className="space-y-8">
+              <p className="text-base md:text-xl text-muted-foreground">
+                Seu e-book, <em className="font-display text-primary">
+                "Adeus Lipedema - Volte a se sentir leve e confiante"</em> revela o 
+                segredo para ser saudável e feliz.
+              </p>
               <div className="space-y-6">
                 <h3 className="font-display text-3xl font-bold text-foreground">
                   O que você vai descobrir:
