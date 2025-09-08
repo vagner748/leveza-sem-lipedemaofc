@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, BookOpen, Heart } from "lucide-react";
-import ebookMockup from "@/assets/ebook-mockup.webp";
 import useFadeInOnScroll from "@/hooks/use-fade-in-on-scroll";
 
 const MovedContent = () => {
@@ -108,7 +107,7 @@ const EbookSection = () => {
             <div className="relative">
               <div className="relative group">
                 <img
-                  src={ebookMockup}
+                  src="/ebook/ebook-mockup.webp"
                   alt="Ebook Adeus Lipedema"
                   className="w-full max-w-md mx-auto animate-float shadow-medical rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
