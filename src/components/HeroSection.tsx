@@ -34,7 +34,7 @@ const HeroSection = () => {
     <div className="space-y-6 animate-fade-in">
       {headlineContent}
       {subheadlineContent}
-      <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-48" />
+      <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-48 animate-slide-in-left" />
     </div>
   );
 
@@ -55,7 +55,7 @@ const HeroSection = () => {
           {headlineContent}
         </div>
         <div className="relative z-10 w-full max-w-md text-left">
-          <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-32" />
+          <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-32 animate-slide-in-right" />
         </div>
         <div className="relative z-10 w-full max-w-md mt-4">
           {subheadlineContent}
