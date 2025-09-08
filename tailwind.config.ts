@@ -22,6 +22,7 @@ export default {
 			fontFamily: {
 				'display': ['Playfair Display', 'serif'],
 				'body': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -45,6 +46,8 @@ export default {
 					hover: 'hsl(var(--accent-hover))'
 				},
 				brown: '#8B4513',
+				'custom-green': '#7c9661',
+				'dark-brown': '#372823',
 				medical: {
 					primary: 'hsl(var(--medical-primary))',
 					secondary: 'hsl(var(--medical-secondary))',

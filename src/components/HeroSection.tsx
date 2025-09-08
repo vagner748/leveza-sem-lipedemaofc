@@ -9,14 +9,12 @@ const HeroSection = () => {
 
   const headlineContent = (
     <h1 className="font-display font-bold text-foreground leading-tight flex flex-col items-start">
-      <span className="text-5xl md:text-7xl">CADA ESCOLHA</span>
-      <span className="text-4xl md:text-6xl">é um passo para</span>
-      <span className="text-3xl md:text-5xl">
+      <span className="text-5xl md:text-7xl text-custom-green font-poppins">CADA ESCOLHA</span>
+      <span className="text-4xl md:text-6xl bg-gradient-medical bg-clip-text text-transparent font-poppins">é um passo para</span>
+      <span className="text-3xl md:text-5xl bg-gradient-medical bg-clip-text text-transparent font-poppins">
         menos <span className="bg-gradient-medical bg-clip-text text-transparent">dor</span> e mais
       </span>
-      <span className="text-2xl md:text-6xl bg-gradient-accent bg-clip-text text-transparent">
-        leveza
-      </span>
+      <img src="/photo-palavra/Design sem nome 2.webp" alt="Leveza" className="h-32 w-32 object-cover object-center mt-[-2rem]" />
     </h1>
   );
 
@@ -34,7 +32,7 @@ const HeroSection = () => {
     <div className="space-y-6 animate-fade-in">
       {headlineContent}
       {subheadlineContent}
-      <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-48 animate-slide-in-left" />
+      <img src="/ebook/escrito por dra. WANNA BORGES (2).webp" alt="Ebook cover" className="w-48 animate-slide-in-left" />
     </div>
   );
 
@@ -55,7 +53,7 @@ const HeroSection = () => {
           {headlineContent}
         </div>
         <div className="relative z-10 w-full max-w-md text-left">
-          <img src="/ebook/ebook-cover.png" alt="Ebook cover" className="w-32 animate-slide-in-right" />
+          <img src="/ebook/escrito por dra. WANNA BORGES (2).webp" alt="Ebook cover" className="w-32 animate-slide-in-right" />
         </div>
         <div className="relative z-10 w-full max-w-md mt-4">
           {subheadlineContent}
