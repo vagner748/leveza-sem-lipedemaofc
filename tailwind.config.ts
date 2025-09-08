@@ -44,6 +44,7 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))',
 					hover: 'hsl(var(--accent-hover))'
 				},
+				brown: '#8B4513',
 				medical: {
 					primary: 'hsl(var(--medical-primary))',
 					secondary: 'hsl(var(--medical-secondary))',

@@ -231,7 +231,7 @@ const AppointmentSection = () => {
                 </p>
                 <Button asChild className="btn-medical w-full md:w-auto text-lg py-4 mb-4">
                   <a href="https://wa.me/5521976681351" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                    <img src="/icones/whatsapp.webp" alt="WhatsApp" className="w-5 h-5 mr-2" />
+                    <img src="/icones/whatsapp-512.webp" alt="WhatsApp" className="w-5 h-5 mr-2" />
                     Agende sua consulta
                   </a>
                 </Button>

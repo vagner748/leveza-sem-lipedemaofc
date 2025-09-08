@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-6">
               <Quote className="w-5 h-5 text-accent" />
-              <span className="text-accent font-semibold">DEPOIMENTOS</span>
+              <span className="text-primary font-semibold">DEPOIMENTOS</span>
             </div>
             
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">

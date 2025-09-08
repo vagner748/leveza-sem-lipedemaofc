@@ -179,9 +179,9 @@ const Footer = () => {
                 <Award className="w-4 h-4 text-primary" />
                 <span>Certificada pelo CFM</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-secondary" />
-                <span>Site Seguro</span>
+              <div className="flex items-center gap-4">
+                <img src="/icones/ambiente seguro.webp" alt="Ambiente Seguro" className="h-10" />
+                <img src="/icones/lgpd.webp" alt="LGPD" className="h-10" />
               </div>
             </div>
           </div>
