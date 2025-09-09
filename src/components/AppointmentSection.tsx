@@ -75,21 +75,21 @@ const AppointmentSection = () => {
   ];
 
   return (
-    <section id="consultas" className="py-20 scroll-mt-20">
+    <section id="consultas" className="py-20 scroll-mt-20 bg-custom-green text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
-              <Calendar className="w-5 h-5 text-primary" />
-              <span className="text-primary font-semibold">AGENDAR CONSULTA</span>
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
+              <Calendar className="w-5 h-5 text-white" />
+              <span className="font-semibold text-white">AGENDAR CONSULTA</span>
             </div>
             
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               Dê o Primeiro Passo
             </h2>
             
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto text-white/90">
               Agende sua consulta e comece sua jornada rumo a uma vida 
               mais saudável e sem limitações.
             </p>
@@ -100,7 +100,7 @@ const AppointmentSection = () => {
             <div className="space-y-8">
               {/* Consultation Types */}
               <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+                <h3 className="font-display text-2xl font-bold mb-6">
                   Opções de Consulta
                 </h3>
                 
@@ -108,13 +108,13 @@ const AppointmentSection = () => {
                   {consultationTypes.map((type, index) => {
                     const IconComponent = type.icon;
                     return (
-                      <div key={index} className="card-medical flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-                        <div className="w-12 h-12 bg-gradient-medical rounded-full flex items-center justify-center">
-                          <IconComponent className="w-6 h-6 text-primary-foreground" />
+                      <div key={index} className="bg-white/10 p-4 rounded-lg flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-foreground">{type.label}</h4>
-                          <p className="text-sm text-muted-foreground">
+                          <h4 className="font-semibold text-white">{type.label}</h4>
+                          <p className="text-sm text-white/90">
                             {type.value === "teleconsulta" ? "Atendimento online" : "Atendimento presencial"}
                           </p>
                         </div>
@@ -126,21 +126,21 @@ const AppointmentSection = () => {
 
               {/* Schedule */}
               <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+                <h3 className="font-display text-2xl font-bold mb-6">
                   Horários de Atendimento
                 </h3>
                 
                 <div className="space-y-4">
                   {scheduleInfo.map((schedule, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-card rounded-lg border border-border">
+                    <div key={index} className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <Clock className="w-5 h-5 text-primary" />
+                        <Clock className="w-5 h-5 text-white" />
                         <div>
-                          <p className="font-semibold text-foreground">{schedule.day}</p>
-                          <p className="text-sm text-muted-foreground">{schedule.type}</p>
+                          <p className="font-semibold text-white">{schedule.day}</p>
+                          <p className="text-sm text-white/90">{schedule.type}</p>
                         </div>
                       </div>
-                      <span className="font-semibold text-primary">{schedule.hours}</span>
+                      <span className="font-semibold text-white">{schedule.hours}</span>
                     </div>
                   ))}
                 </div>
@@ -148,36 +148,36 @@ const AppointmentSection = () => {
 
               {/* Location */}
               <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+                <h3 className="font-display text-2xl font-bold mb-6">
                   Localização do Consultório
                 </h3>
                 
-                <div className="card-medical">
+                <div className="bg-white/10 p-6 rounded-lg">
                   <div className="flex items-start gap-4 mb-4">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">
+                      <h4 className="font-semibold text-white mb-2">
                         Consultório Médico Dra. Wanna Borges
                       </h4>
-                      <p className="text-muted-foreground mb-4">
+                      <p className="text-white/90 mb-4">
                         R. Dois de Dezembro, 78 - sl 317 - Flamengo, Rio de Janeiro - RJ, 22220-040, Brasil<br />
                         Rua do Catete 311, Rio de Janeiro
                       </p>
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                         <div>
-                          <p className="font-semibold text-foreground">🚇 Metrô:</p>
-                          <p className="text-muted-foreground">Estação Flamengo</p>
+                          <p className="font-semibold text-white">🚇 Metrô:</p>
+                          <p className="text-white/90">Estação Flamengo</p>
                         </div>
                         <div>
-                          <p className="font-semibold text-foreground">🚗 Estacionamento:</p>
-                          <p className="text-muted-foreground">Conveniado no prédio</p>
+                          <p className="font-semibold text-white">🚗 Estacionamento:</p>
+                          <p className="text-white/90">Conveniado no prédio</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  <Button variant="outline" className="w-full" asChild>
+                  <Button variant="outline" className="w-full border-white text-white hover:bg-white/10 hover:text-white" asChild>
                     <a
                       href="https://www.google.com/maps/place/DRA.+WANNA+BORGES/@-22.9296904,-43.1794838,17z/data=!4m16!1m9!3m8!1s0x997f1fcb703c53:0x2ffe3ea6fceede7f!2sDRA.+WANNA+BORGES!8m2!3d-22.9296904!4d-43.1769089!9m1!1b1!16s%2Fg%2F11j2z3sf50!3m5!1s0x997f1fcb703c53:0x2ffe3ea6fceede7f!8m2!3d-22.9296904!4d-43.1769089!16s%2Fg%2F11j2z3sf50?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
@@ -192,7 +192,7 @@ const AppointmentSection = () => {
 
               {/* Contact Methods */}
               <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+                <h3 className="font-display text-2xl font-bold mb-6">
                   Outras Formas de Contato
                 </h3>
                 
@@ -205,14 +205,14 @@ const AppointmentSection = () => {
                         href={contact.action}
                         target={contact.action.startsWith('http') ? '_blank' : undefined}
                         rel={contact.action.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="card-medical flex items-center gap-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        className="bg-white/10 p-4 rounded-lg flex items-center gap-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
                       >
-                        <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center">
-                          <IconComponent className="w-6 h-6 text-accent-foreground" />
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-foreground">{contact.label}</h4>
-                          <p className="text-sm text-muted-foreground">{contact.value}</p>
+                          <h4 className="font-semibold text-white">{contact.label}</h4>
+                          <p className="text-sm text-white/90">{contact.value}</p>
                         </div>
                       </a>
                     );
@@ -222,20 +222,20 @@ const AppointmentSection = () => {
             </div>
 
             <div>
-              <div className="card-medical text-center p-8">
-                <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <div className="bg-white/10 text-center p-8 rounded-lg">
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">
                   Agende sua consulta agora mesmo
                 </h3>
-                <p className="text-lg text-muted-foreground mb-6 max-w-md mx-auto">
+                <p className="text-lg text-white/90 mb-6 max-w-md mx-auto">
                   Tratamentos personalizados para mulheres que desejam eliminar varizes e lipedema, melhorando a saúde e a autoestima.
                 </p>
-                <Button asChild className="btn-medical w-full md:w-auto text-lg py-4 mb-4">
+                <Button asChild className="bg-white text-custom-green font-semibold hover:bg-gray-200 w-full md:w-auto text-lg py-4 mb-4">
                   <a href="https://wa.me/5521976681351" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                     <img src="/icones/whatsapp-512.webp" alt="WhatsApp" className="w-5 h-5 mr-2" />
                     Agende sua consulta
                   </a>
                 </Button>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-white/90">
                   Atendimento personalizado e exclusivo realizado apenas de forma particular. Clique no botão para agendar sua consulta.
                 </p>
               </div>

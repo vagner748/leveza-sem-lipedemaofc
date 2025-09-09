@@ -171,7 +171,7 @@ const Footer = () => {
         <div className="border-t border-background/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-background/70">
-              © 2024 Dra. Wanna Borges. Todos os direitos reservados.
+              © 2025 Dra. Wanna Borges. Todos os direitos reservados.
             </div>
 
             <div className="flex items-center gap-6 text-sm text-background/70">

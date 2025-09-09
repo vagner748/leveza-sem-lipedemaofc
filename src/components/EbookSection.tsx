@@ -17,11 +17,14 @@ const MovedContent = () => {
     <div className="text-center mb-16">
       {/* CTA Buttons */}
       <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-        <Button
-          onClick={() => scrollToSection('ebook')}
-          className="btn-medical text-base px-6 py-3 animate-pulse-soft w-full sm:w-auto"
-        >
-          Transforme sua dor em alívio
+        <Button asChild className="btn-medical text-base px-6 py-3 animate-pulse-soft w-full sm:w-auto">
+          <a
+            href="https://pay.hotmart.com/R99789259P?checkoutMode=10&bid=1755551894672"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Transforme sua dor em alívio
+          </a>
         </Button>
         
         <Button
@@ -120,7 +123,7 @@ const EbookSection = () => {
               </div>
               
               <div className="absolute bottom-0 left-0 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-medium sm:-bottom-4 sm:-left-4">
-                PDF + EPUB
+                PDF
               </div>
             </div>
 

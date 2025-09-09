@@ -112,7 +112,7 @@ const AboutSection = () => {
                   
                   <p>
                     Sua paixão pelo tratamento do lipedema surgiu após perceber a 
-                    <strong className="text-primary"> falta de informação e tratamentos adequados</strong> 
+                    <strong className="text-primary"> falta de informação e tratamentos adequados </strong> 
                     para suas pacientes. Desde então, desenvolveu um método próprio que 
                     combina medicina baseada em evidências com cuidado humanizado.
                   </p>

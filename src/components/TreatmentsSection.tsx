@@ -64,17 +64,14 @@ const TreatmentsSection = () => {
     {
       title: "Diabetologia",
       description: "Tratamento especializado para diabetes tipo 1, 2 e gestacional",
-      color: "bg-primary/10 text-primary"
     },
     {
       title: "Obesidade",
       description: "Abordagem integral para perda de peso saudável e sustentável",
-      color: "bg-primary/10 text-primary"
     },
     {
       title: "Patologias da Tireoide",
       description: "Diagnóstico e tratamento de hipo e hipertireoidismo, nódulos",
-      color: "bg-primary/10 text-primary"
     }
   ];
 
@@ -87,21 +84,21 @@ const TreatmentsSection = () => {
   };
 
   return (
-    <section className="py-20 scroll-mt-20">
+    <section className="py-20 scroll-mt-20 bg-custom-green text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
-              <Stethoscope className="w-5 h-5 text-primary" />
-              <span className="text-primary font-semibold">TRATAMENTOS</span>
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
+              <Stethoscope className="w-5 h-5 text-white" />
+              <span className="font-semibold text-white">TRATAMENTOS</span>
             </div>
             
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               Cuidado Integral para sua Saúde
             </h2>
             
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto text-white/90">
               Oferecemos uma abordagem multidisciplinar com foco em resultados 
               duradouros e qualidade de vida.
             </p>
@@ -110,11 +107,11 @@ const TreatmentsSection = () => {
           {/* Specialties */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {specialties.map((specialty, index) => (
-              <div key={index} className="card-medical text-center group hover:scale-105 transition-transform duration-300">
-                <div className={`inline-flex px-4 py-2 rounded-full text-sm font-semibold mb-4 ${specialty.color}`}>
+              <div key={index} className="bg-white/10 p-6 rounded-lg text-center group hover:scale-105 transition-transform duration-300">
+                <div className={`inline-flex px-4 py-2 rounded-full text-sm font-semibold mb-4 bg-white/20 text-white`}>
                   {specialty.title}
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-white/90">
                   {specialty.description}
                 </p>
               </div>
@@ -123,13 +120,13 @@ const TreatmentsSection = () => {
 
           {/* Treatments Carousel */}
           <div>
-            <h3 className="font-display text-3xl font-bold text-foreground text-center mb-12">
+            <h3 className="font-display text-3xl font-bold text-center mb-12">
               Consultas e Procedimentos
             </h3>
             
             <div className="relative">
               {/* Treatment Card */}
-              <div className="bg-card rounded-[var(--radius-xl)] p-8 md:p-12 shadow-card border border-border">
+              <div className="bg-white/10 rounded-2xl p-8 md:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   {/* Icon and Title */}
                   <div className="space-y-6">
@@ -137,46 +134,46 @@ const TreatmentsSection = () => {
                       {(() => {
                         const IconComponent = treatments[currentSlide].icon;
                         return (
-                          <div className="w-16 h-16 rounded-full bg-gradient-medical flex items-center justify-center">
-                            <IconComponent className="w-8 h-8 text-primary-foreground" />
+                          <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+                            <IconComponent className="w-8 h-8 text-white" />
                           </div>
                         );
                       })()}
                       
                       <div>
-                        <h4 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+                        <h4 className="font-display text-2xl md:text-3xl font-bold">
                           {treatments[currentSlide].title}
                         </h4>
-                        <div className="flex items-center gap-4 mt-2 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-4 mt-2 text-sm text-white/90">
                           <span>⏱️ {treatments[currentSlide].duration}</span>
                           <span>💰 {treatments[currentSlide].price}</span>
                         </div>
                       </div>
                     </div>
                     
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-lg leading-relaxed text-white/90">
                       {treatments[currentSlide].description}
                     </p>
                   </div>
 
                   {/* Details */}
                   <div className="space-y-6">
-                    <h5 className="font-display text-xl font-bold text-foreground">
+                    <h5 className="font-display text-xl font-bold">
                       O que está incluso:
                     </h5>
                     
                     <div className="space-y-3">
                       {treatments[currentSlide].details.map((detail, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-muted-foreground">{detail}</p>
+                          <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-white/90">{detail}</p>
                         </div>
                       ))}
                     </div>
                     
                     <Button 
                       onClick={() => document.getElementById('consultas')?.scrollIntoView({ behavior: 'smooth' })}
-                      className="btn-medical w-full mt-6"
+                      className="w-full mt-6 bg-white text-custom-green font-semibold hover:bg-gray-200"
                     >
                       Agendar {treatments[currentSlide].title.split(' ')[0]}
                     </Button>
@@ -190,9 +187,9 @@ const TreatmentsSection = () => {
                   variant="outline"
                   size="icon"
                   onClick={prevSlide}
-                  className="w-12 h-12 rounded-full"
+                  className="group w-12 h-12 rounded-full border-white text-white hover:bg-white/10 hover:text-white"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-6 h-6 text-custom-green group-hover:text-white" />
                 </Button>
 
                 {/* Dots */}
@@ -203,8 +200,8 @@ const TreatmentsSection = () => {
                       onClick={() => setCurrentSlide(index)}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
                         index === currentSlide 
-                          ? 'bg-primary scale-125' 
-                          : 'bg-muted-foreground hover:bg-primary/50'
+                          ? 'bg-white scale-125' 
+                          : 'bg-white/50 hover:bg-white/75'
                       }`}
                     />
                   ))}
@@ -214,9 +211,9 @@ const TreatmentsSection = () => {
                   variant="outline"
                   size="icon"
                   onClick={nextSlide}
-                  className="w-12 h-12 rounded-full"
+                  className="group w-12 h-12 rounded-full border-white text-white hover:bg-white/10 hover:text-white"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-6 h-6 text-custom-green group-hover:text-white" />
                 </Button>
               </div>
             </div>
@@ -224,7 +221,7 @@ const TreatmentsSection = () => {
 
           {/* CTA Section */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-medical text-primary-foreground rounded-[var(--radius-xl)] p-8 md:p-12">
+            <div className="bg-white/10 text-white rounded-2xl p-8 md:p-12">
               <h3 className="font-display text-2xl md:text-3xl font-bold mb-4">
                 Pronta para dar o primeiro passo?
               </h3>
@@ -234,7 +231,7 @@ const TreatmentsSection = () => {
               </p>
               <Button 
                 onClick={() => document.getElementById('consultas')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-background text-foreground px-8 py-3 rounded-[var(--radius-lg)] font-semibold hover:scale-105 transition-transform duration-300"
+                className="bg-white text-custom-green px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
               >
                 Quero Agendar Minha Consulta
               </Button>
