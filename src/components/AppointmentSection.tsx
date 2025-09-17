@@ -38,7 +38,7 @@ const AppointmentSection = () => {
   const scheduleInfo = [
     {
       day: "Segunda a Sexta",
-      hours: "08:00 - 18:00",
+      hours: "14:00 - 18:00",
       type: "Consultas Presenciais"
     },
     {
@@ -48,7 +48,7 @@ const AppointmentSection = () => {
     },
     {
       day: "Segunda a Sexta",
-      hours: "19:00 - 21:00",
+      hours: "09:00 - 14:00",
       type: "Teleconsultas"
     }
   ];
@@ -57,14 +57,14 @@ const AppointmentSection = () => {
     {
       icon: Phone,
       label: "Telefone",
-      value: "+55 21 97668-1351",
-      action: "tel:+5521976681351"
+      value: "+55 21 97671-5982",
+      action: "tel:+5521976715982"
     },
     {
       icon: Mail,
       label: "E-mail",
-      value: "contato@drawannaborges.com.br",
-      action: "mailto:contato@drawannaborges.com.br"
+      value: "wanilongmais@gmail.com",
+      action: "mailto:wanilongmais@gmail.com"
     },
     {
       icon: Instagram,
@@ -230,7 +230,7 @@ const AppointmentSection = () => {
                   Tratamentos personalizados para mulheres que desejam eliminar varizes e lipedema, melhorando a saúde e a autoestima.
                 </p>
                 <Button asChild className="bg-white text-custom-green font-semibold hover:bg-gray-200 w-full md:w-auto text-lg py-4 mb-4">
-                  <a href="https://wa.me/5521976681351" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                  <a href="https://wa.me/5521976715982" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                     <img src="/icones/whatsapp-512.webp" alt="WhatsApp" className="w-5 h-5 mr-2" />
                     Agende sua consulta
                   </a>

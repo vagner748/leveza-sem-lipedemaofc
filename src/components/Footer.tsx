@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Shield, Award } from
 const Footer = () => {
   const quickLinks = [
     { label: "Sobre a Dra. Wanna", href: "#sobre" },
-    { label: "Ebook Lipederma", href: "#ebook" },
+    { label: "Ebook Lipedema", href: "#ebook" },
     { label: "Tratamentos", href: "#tratamentos" },
     { label: "Agendar Consulta", href: "#consultas" }
   ];
@@ -22,9 +22,7 @@ const Footer = () => {
 
   const certifications = [
     "CRM: 52687448-RJ",
-    "RQE: 12345 - Endocrinologia",
     "Especialista em Lipedema",
-    "Membro da SBEM"
   ];
 
   const scrollToSection = (href: string) => {
@@ -125,20 +123,20 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-primary" />
                   <a 
-                    href="tel:+5521976681351"
+                    href="tel:+5521976715982"
                     className="text-sm text-background/80 hover:text-primary transition-colors"
                   >
-                    +55 21 97668-1351
+                    +55 21 97671-5982
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <a 
-                    href="mailto:contato@drawannaborges.com.br"
+                    href="mailto:wanilongmais@gmail.com"
                     className="text-sm text-background/80 hover:text-primary transition-colors"
                   >
-                    contato@drawannaborges.com.br
+                    wanilongmais@gmail.com
                   </a>
                 </div>
               </div>

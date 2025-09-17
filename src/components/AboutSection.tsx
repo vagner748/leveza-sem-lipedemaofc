@@ -7,7 +7,7 @@ const AboutSection = () => {
     {
       icon: GraduationCap,
       title: "Formação",
-      description: "Graduação em Medicina - USP\nResidência em Endocrinologia - HC-FMUSP"
+      description: "Graduação em Medicina Faculdade de Medicina Teresopólis"
     },
     {
       icon: Award,
@@ -17,7 +17,7 @@ const AboutSection = () => {
     {
       icon: Clock,
       title: "Experiência",
-      description: "20 anos de prática clínica\n8 anos focada em lipedema\nMais de 3.000 consultas"
+      description: "20 anos de prática clínica\n4 anos focada em lipedema\nMais de 3.000 consultas"
     },
     {
       icon: Users,
