@@ -37,18 +37,13 @@ const AppointmentSection = () => {
 
   const scheduleInfo = [
     {
-      day: "Segunda a Sexta",
+      day: "Segunda a Quinta",
       hours: "14:00 - 18:00",
       type: "Consultas Presenciais"
     },
     {
-      day: "Sábados",
-      hours: "08:00 - 14:00",
-      type: "Consultas Presenciais"
-    },
-    {
-      day: "Segunda a Sexta",
-      hours: "09:00 - 14:00",
+      day: "Sexta-Feira",
+      hours: "14:00 - 18:00",
       type: "Teleconsultas"
     }
   ];
